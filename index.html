@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>josemegias.com - Freelance web apps and mobile developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <section class="projects">
+        <img class="logo" src="assets/josemegias-logo.png" alt="josemegias.com">
+        <div style="position: absoulte; float:right">
+          <div class="select">
+            <select @change="onChange($event)" :value="currentLanguage">
+              <option v-for="lang in languages" :value="lang.code">{{$t(lang.text)}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-mobile is-centered">
+              <div class="intro info-card column">
+                <img style="max-width: 200px" id="jose" src="assets/josemegias.png" alt="Jose Megias">
+                <p style="font-size: 42px; line-height: 1.2;">{{$t('_jose')}} <b>{{$t('_megias')}}</b></p>
+                <h1 style="font-size: 18px; font-weight: 300;" v-html="$t('_title')"></h1>
+                <p>
+                  <a :href="`mailto:${$t('_email_jose')}`" v-html="$t('_email_jose')"></a>
+                </p>
+                <p>
+                  <a :href="`tel:${$t('_phone_jose')}`" v-html="$t('_phone_jose_formatted')"></a>
+                </p>
+                <div class="social-networks pt-4">
+                  <a target="_blank" href="https://www.linkedin.com/in/jose-megias/">
+                    <div>
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                      <p>Linkedin</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-mobile is-centered">
+              <div class="button is-medium is-rounded header-button aboutme-button">
+                <p v-html="$t('_about_me')"></p>
+              </div>
+              <div class="button is-medium is-rounded header-button projects-button">
+                <p v-html="$t('_projects')"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section id="about-me" class="hero about-me dark-bg">
+      <div class="hero-body pt-4">
+        <div class="container">
+          <h2 v-html="$t('_about_me')"></h2>
+          <div class="columns is-centered aboutme-card">
+            <!-- <div class="column jose-container is-4-desktop is-full-mobile">
+                <img id="jose" src="assets/josemegias.png" alt="Jose Megias">
+              </div> -->
+            <div class="column about-me-desc is-12-desktop" v-html="$t('_about_me_desc')">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-body pb-6 pt-1">
+        <div class="container">
+          <h3 v-html="$t('_technologies')" class="pt-3 pb-3"></h3>
+          <div class="columns is-align-items-center has-text-centered">
+            <div v-for="(item, index) in tech" class="column column-images">
+              <div class="card-image">
+                <figure>
+                  <a :href="item.tech_url" target="_blank"><img class="image-tech" :src="`./assets/tech/${item.logo_url}`" :alt="item.name"></a>
+                </figure>
+              </div>
+            </div>
+          </div>
+    </section>
+    <section id="message-1" class="image-bg">
+      <div class="hero-body">
+        <h2 class="has-text-centered" v-html="$t('_adapt_to_your_project')"></h2>
+      </div>
+    </section>
+    <section id="projects" class="projects light-bg">
+      <div class="hero-body">
+        <div class="container">
+          <h2 v-html="$t('_projects')"></h2>
+          <div class="columns">
+
+            <div @click="showProject(project)" v-for="(project, index) in projects" :key="index" class="card column">
+              <div class="tags project-tags has-addons">
+                <span class="tag is-dark is-normal" v-html="$t(`_${project.type}`)"></span>
+                <span :class="project.type === 'design' ? 'is-success': 'is-info' " class="tag is-info"></span>
+              </div>
+              <div class="card-image">
+                <figure>
+                  <img :src="`/assets/projects/${project.image}`" alt="Logo Innporting">
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <b class="card-title" v-html="project.name"></b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="message-2" class="hero image-bg">
+      <!-- <div class="hero-body">
+          <div class="container">
+            <h2 v-html="$t('_customers')"></h2>
+            <div class="columns">
+              <div v-for="(item, index) in customers" :key="index" class="column">
+                <div class="card-image ">
+                  <figure>
+                    <img :src="item.logo" :alt="item.desc">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column contact-container has-text-centered is-full-mobile">
+              <div class="card">
+                <div class="card-image has-background-dark p-6">
+                  <p class="title is-3 has-text-white">{{$t('_contact_with_me')}}</p>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content p-4">
+                      <ul>
+                        <li v-html="$t('_app_creation')"></li>
+                        <li v-html="$t('_personal_web')"></li>
+                        <li v-html="$t('_help_fixing_web')"></li>
+                      </ul>
+                      <p class="contact-links" class="is-6">
+                      <p>
+                        <a href="mailto:josemegias.web@gmail.com">{{$t('_email_jose')}}</a>
+                      </p>
+                      <p>
+                        <a :href="`tel:${$t('_phone_jose')}`">{{$t('_phone_jose_formatted')}}</a>
+                      </p>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      {{$t('_web_jose_formatted')}}
+    </footer>
+    <div class="background" @click="background()" v-if="!hidePopup">
+
+    </div>
+    <div class="card-info" :class=" hidePopup ? 'bottom-1500' : ''">
+      <div class="has-text-black popup-content p-3">
+        <div @click="background()">
+          <i class="fa fa-times"></i>
+        </div>
+        <h2 class="has-text-centered">{{currentProject.name}}</h2>
+        <div class="popup-image">
+          <img class="popup-image" :src="`/assets/projects/${currentProject.image}`" />
+        </div>
+        <p class="p-4" v-html="$t(currentProject.description)"></p>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+<script src="js/scripts.js"></script>
+
+</html>

@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700&display=swap");
+body {
+  background-color: #262626;
+  color: white;
+  font-family: "Catamaran", sans-serif;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Josefin Sans";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 2.5;
+}
+
+h3 {
+  font-family: rgba(150, 89, 224, 0.82);
+  font-size: 26px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 19px;
+}
+
+a {
+  color: rgba(150, 89, 224, 0.82);
+  font-weight: bold;
+}
+
+ul {
+  font-size: 20px;
+}
+
+ul li {
+  padding-bottom: 10px;
+  line-height: 1.6;
+}
+
+a:hover {
+  /* color: rgba(255, 255, 255, 0.801); */
+  color: #363636;
+}
+
+header {
+  background-image: url("../assets/header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+header .button {
+  -webkit-box-shadow: 0px 10px 13px -7px #0000005e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #0000005e, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  margin-bottom: 100px;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.logo {
+  max-width: 50px;
+}
+
+.info-card {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 750px;
+  line-height: 1.8;
+  background: rgba(46, 46, 46, 0.8);
+  border-radius: 15px !important;
+  padding: 20px;
+  text-align: center;
+  margin: 100px 20px 0px;
+}
+
+.info-card a {
+  color: white;
+  font-size: 20px;
+  font-family: "Josefin Sans";
+  font-weight: 200;
+}
+
+.info-card p:first-child {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.social-networks,
+.social-networks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social-networks div {
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  -webkit-box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.397);
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.397);
+  -webkit-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.social-networks div:hover {
+  -webkit-box-shadow: inset 0 0 0 50px rgba(150, 89, 224, 0.82);
+  box-shadow: inset 0 0 0 50px rgba (150, 89, 224, 0.82);
+}
+
+.social-networks div:last-child {
+  background: none;
+}
+
+.social-networks div:hover:last-child {
+  box-shadow: none;
+}
+
+.social-networks a {
+  color: white;
+  margin: 0 10px;
+}
+
+.social-networks svg {
+  width: 24px !important;
+  height: 24px;
+}
+
+.button {
+  font-size: 24px;
+  font-weight: 700;
+  background: rgba(150, 89, 224, 0.82);
+  color: white;
+  margin-top: 20px;
+  border: none;
+  width: 200px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.button:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(112, 14, 231, 0.801);
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.background {
+  background-color: rgb(0 0 0 / 68%);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.background:before {
+  background-color: rgb(0 0 0 / 0%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.card-info {
+  z-index: 3;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.popup-content svg {
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.bottom-1500 {
+  bottom: -1500px;
+}
+
+.card-info:before {
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+}
+
+.card-info .popup-content {
+  margin-bottom: 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0 auto;
+  min-height: 500px;
+  max-width: 800px;
+  min-width: 300px;
+  background-color: white;
+  border: 1px solid 1px solid #00000085;
+}
+
+.button > p {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.aboutme-button {
+  margin-right: 20px;
+}
+
+.header-button:hover:before {
+  bottom: 0;
+}
+
+.header-button:before {
+  bottom: 60px;
+  left: 0;
+}
+
+.projects .columns {
+  margin-bottom: 10px;
+}
+
+.projects .column {
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  #tech .card-image {
+    max-width: 50px;
+  }
+  .column-images {
+    float: left;
+    min-height: 100px;
+  }
+}
+
+#projects .card {
+  cursor: pointer;
+}
+
+#projects .card-content b.card-title {
+  font-size: 22px;
+}
+
+#projects .card-image {
+  padding-top: 30px;
+}
+
+#projects .card-image figure {
+  height: 150px;
+  max-width: 200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.project-tags {
+  position: absolute;
+  top: 12px;
+}
+
+.load-more {
+  text-align: center;
+}
+
+.load-more-bttn:hover:before {
+  left: 0;
+}
+
+.load-more-bttn:before {
+  top: 0;
+  left: -210px;
+}
+
+.about-me {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.about-me-desc p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.about-me-desc a {
+  color: white;
+}
+
+.jose-container {
+  text-align: center;
+}
+
+.contact-container h3 {
+  padding-bottom: 20px;
+}
+
+.contact-container a {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.light-bg {
+  background-color: #2e2e2e;
+}
+
+.dark-bg {
+  background-color: #262626;
+}
+
+.image-bg {
+  background-color: goldenrod;
+}
+
+footer {
+  background-color: #191919;
+  height: 60px;
+  text-align: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .columns {
+    display: contents;
+  }
+  .info-card {
+    padding: 10px;
+  }
+}
+
+.aboutme-card {
+  border-radius: 5px;
+  background: #2e2e2e;
+  padding: 20px;
+  align-items: center;
+}
+
+.image-tech {
+  max-width: 55px;
+}
+
+#message-1 {
+  background-image: url("../assets/background.jpg");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#message-1 h2 {
+  color: white;
+  text-shadow: #2e2e2e 0 4px 5px;
+}
+
+#message-2 {
+  background-image: url("../assets/background.jpg");
+  height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#message-2 h2 {
+  color: white;
+  text-shadow: #2e2e2e 0 4px 5px;
+}
+
+#message-2 .card {
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.card {
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.popup-image {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.popup-image img {
+  max-width: 150px;
+}
