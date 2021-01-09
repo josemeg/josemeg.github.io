@@ -19,10 +19,15 @@
       <section class="projects">
         <img class="logo" src="assets/josemegias-logo.png" alt="josemegias.com">
         <div style="position: absoulte; float:right">
-          <div class="select">
-            <select @change="onChange($event)" :value="currentLanguage">
-              <option v-for="lang in languages" :value="lang.code">{{$t(lang.text)}}</option>
-            </select>
+          <div class=" control has-icons-left">
+            <div class="select">
+              <select @change="onChange($event)" :value="currentLanguage">
+                <option v-for="lang in languages" :value="lang.code">{{$t(lang.text)}}</option>
+              </select>
+            </div>
+            <div class="icon is-small is-left">
+              <i class="fas fa-globe"></i>
+            </div>
           </div>
         </div>
         <div class="hero-body">
@@ -135,7 +140,8 @@
             </div>
           </div>
         </div> -->
-      <div class="hero-body">
+
+      <!-- <div class="hero-body">
         <div class="container">
           <div class="columns is-centered">
             <div class="column contact-container has-text-centered is-full-mobile">
@@ -166,7 +172,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <footer>
       {{$t('_web_jose_formatted')}}

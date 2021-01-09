@@ -63,6 +63,15 @@ header .button {
   margin-bottom: 100px;
 }
 
+.select select {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.select select * {
+  color: black;
+}
+
 .columns:not(:last-child) {
   margin-bottom: 0px;
 }
