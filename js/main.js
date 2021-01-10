@@ -254,7 +254,11 @@ var app = new Vue({
   },
   beforeMount() {
     let userLang = navigator.language || navigator.userLanguage
-    this.currentLanguage = userLang
+
+    if (userLang === "es-ES" || userLang === "es") this.currentLanguage = "es"
+    else if (userLang === "ca-ES" || userLang === "ca") this.currentLanguage = "ca"
+    else this.currentLanguage = "en"
+
     this.projects = _PROJECTS
     this.tech = _TECH
     this.customers = _CUSTOMERS
