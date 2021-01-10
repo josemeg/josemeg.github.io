@@ -173,6 +173,7 @@ const _PROJECTS = [
     image: "urbinium/logo-urbinium-cat.png",
     imagedesc: "Logo URBINIUM",
     description: "_urbinium_desc",
+    video: "",
   },
   {
     name: "Innporting",
@@ -180,6 +181,7 @@ const _PROJECTS = [
     image: "innporting/logo-innporting-color.svg",
     imagedesc: "Logo Innporting",
     description: "_innporting_desc",
+    video: "",
   },
   {
     name: "Recognitic",
@@ -187,6 +189,7 @@ const _PROJECTS = [
     image: "recognitic/recognitic_LOGO-03.png",
     imagedesc: "Logo Recognitic",
     description: "_recognitic_desc",
+    video: "",
   },
   {
     name: "DEACatalunya",
@@ -194,6 +197,8 @@ const _PROJECTS = [
     image: "deacatalunya/deacat-icon.png",
     imagedesc: "Logo DEACatalunya",
     description: "_deacat_desc",
+    video:
+      "<iframe width='100%' height='315' src='https://www.youtube.com/embed/eWPUhcznLhU' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
   },
 ]
 
@@ -203,7 +208,7 @@ const _CUSTOMERS = [
     desc: "",
     logo: "customer.png",
     url: "",
-  }
+  },
 ]
 
 var app = new Vue({

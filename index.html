@@ -190,6 +190,7 @@
           <img class="popup-image" :src="`/assets/projects/${currentProject.image}`" />
         </div>
         <p class="p-4" v-html="$t(currentProject.description)"></p>
+        <p v-if="currentProject.video" v-html="currentProject.video"></p>
       </div>
     </div>
   </div>
