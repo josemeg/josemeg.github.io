@@ -326,7 +326,7 @@ header .button {
 }
 
 .about-me-desc a {
-  color: white;
+  color: rgb(181 119 255);
 }
 
 .jose-container {
@@ -436,4 +436,9 @@ footer {
 
 .popup-image img {
   max-width: 150px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: rgb(181 119 255);
 }
