@@ -17,3 +17,6 @@ $(".aboutme-button").click(function () {
     1200
   )
 })
+
+gsap.from(".anim1", { opacity: 0, duration: 1, y: -50, stagger: 0.3 })
+gsap.from("header", { opacity: 0, duration: 3 })

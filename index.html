@@ -34,16 +34,16 @@
           <div class="container">
             <div class="columns is-mobile is-centered">
               <div class="intro info-card column">
-                <img style="max-width: 200px" id="jose" src="assets/josemegias.png" alt="Jose Megias">
-                <p style="font-size: 42px; line-height: 1.2;">{{$t('_jose')}} <b>{{$t('_megias')}}</b></p>
-                <h1 style="font-size: 18px; font-weight: 300;" v-html="$t('_title')"></h1>
-                <p>
+                <img class="anim1" style="max-width: 200px" id="jose" src="assets/josemegias.png" alt="Jose Megias">
+                <p class="anim1" style="font-size: 42px; line-height: 1.2;">{{$t('_jose')}} <b>{{$t('_megias')}}</b></p>
+                <h1 class="anim1" style="font-size: 18px; font-weight: 300;" v-html="$t('_title')"></h1>
+                <p class="anim1">
                   <a :href="`mailto:${$t('_email_jose')}`" v-html="$t('_email_jose')"></a>
                 </p>
-                <p>
+                <p class="anim1">
                   <a :href="`tel:${$t('_phone_jose')}`" v-html="$t('_phone_jose_formatted')"></a>
                 </p>
-                <div class="social-networks pt-4">
+                <div class="social-networks pt-4 anim1">
                   <a target="_blank" href="https://www.linkedin.com/in/jose-megias/">
                     <div>
                       <i class="fab fa-linkedin"></i>
@@ -55,7 +55,7 @@
                 </div>
               </div>
             </div>
-            <div class="columns is-mobile is-centered">
+            <div class="columns is-mobile is-centered anim1">
               <div class="button is-medium is-rounded header-button aboutme-button">
                 <p v-html="$t('_about_me')"></p>
               </div>
@@ -72,10 +72,10 @@
         <div class="container">
           <h2 v-html="$t('_about_me')"></h2>
           <div class="columns is-centered aboutme-card">
-            <!-- <div class="column jose-container is-4-desktop is-full-mobile">
-                <img id="jose" src="assets/josemegias.png" alt="Jose Megias">
-              </div> -->
-            <div class="column about-me-desc is-12-desktop" v-html="$t('_about_me_desc')">
+            <div class="column jose-container is-4-desktop is-full-mobile">
+                <img id="jose" src="assets/logo.png" alt="Jose Megias">
+              </div>
+            <div class="column about-me-desc is-8-desktop" v-html="$t('_about_me_desc')">
 
             </div>
           </div>
@@ -194,9 +194,9 @@
       </div>
     </div>
   </div>
-  <script src="js/main.js"></script>
 </body>
 
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script src="js/scripts.js"></script>
-
 </html>
