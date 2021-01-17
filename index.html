@@ -133,7 +133,7 @@
               <div v-for="(item, index) in customers" :key="index" class="column">
                 <div class="card-image ">
                   <figure>
-                    <img :src="item.logo" :alt="item.desc">
+                    <img :src="`/assets/${item.logo}`" :alt="item.desc">
                   </figure>
                 </div>
               </div>
