@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" href="assets/icon.png" />
   <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 </head>
 
 <body>
@@ -134,7 +134,7 @@
               <div v-for="(item, index) in customers" :key="index" class="column">
                 <div class="card-image ">
                   <figure>
-                    <img :src="item.logo" :alt="item.desc">
+                    <img :src="`/assets/${item.logo}`" :alt="item.desc">
                   </figure>
                 </div>
               </div>
@@ -188,7 +188,7 @@
         </div>
         <h2 class="has-text-centered">{{currentProject.name}}</h2>
         <div class="popup-image">
-          <img class="popup-image" :src="`/assets/projects/${currentProject.image}`" />
+          <img class="popup-image" v-if="Object.keys(currentProject).length > 0" :src="`/assets/projects/${currentProject.image}`" />
         </div>
         <p class="p-4" v-html="$t(currentProject.description)"></p>
         <p v-if="currentProject.video" v-html="currentProject.video"></p>
