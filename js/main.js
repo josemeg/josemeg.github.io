@@ -228,10 +228,12 @@ var app = new Vue({
     ],
   },
   methods: {
-    onChange(ev) {
+    onChange(ev)
+    {
       this.currentLanguage = ev.target.value
     },
-    $t(literal) {
+    $t(literal)
+    {
       switch (this.currentLanguage) {
         case "en":
           return _TEXT.en[literal] || literal
@@ -243,16 +245,19 @@ var app = new Vue({
           return _TEXT.en[literal] || literal
       }
     },
-    background() {
+    background()
+    {
       this.hidePopup = !this.hidePopup
       this.currentProject = {}
     },
-    showProject(project) {
+    showProject(project)
+    {
       this.currentProject = project
       this.hidePopup = !this.hidePopup
     },
   },
-  beforeMount() {
+  beforeMount()
+  {
     let userLang = navigator.language || navigator.userLanguage
 
     if (userLang === "es-ES" || userLang === "es") this.currentLanguage = "es"
