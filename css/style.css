@@ -353,7 +353,8 @@ header .button {
 }
 
 .image-bg {
-  background-color: goldenrod;
+  /* background-color: goldenrod; */
+  background-color: #6197e2;
 }
 
 footer {
@@ -393,7 +394,7 @@ footer {
 }
 
 #message-1 {
-  background-image: url("../assets/background.jpg");
+  /* background-image: url("../assets/background.jpg"); */
   height: auto;
   background-attachment: fixed;
   background-position: center;
